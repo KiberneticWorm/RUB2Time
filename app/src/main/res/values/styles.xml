@@ -1,0 +1,15 @@
+<resources>
+
+    <style name="AppTheme" parent="@style/Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="fontFamily">@font/roboto_regular</item>
+    </style>
+
+    <style name="AppTheme.SplashTheme">
+        <item name="android:windowBackground">@color/colorPrimaryVariant</item>
+    </style>
+
+</resources>

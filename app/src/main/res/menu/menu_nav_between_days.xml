@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/item_prev_day"
+        android:title="@string/day"
+        android:icon="@drawable/ic_left_arrow"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_today"
+        android:title="@string/today"
+        android:icon="@drawable/ic_clock"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/item_next_day"
+        android:title="@string/day"
+        android:icon="@drawable/ic_right_arrow"
+        app:showAsAction="always" />
+</menu>

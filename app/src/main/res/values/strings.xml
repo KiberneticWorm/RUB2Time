@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">RUB2Time</string>
+    <string name="day">День</string>
+    <string name="today">Сегодня</string>
+    <string name="without">В этот день занятий нет!</string>
+    <string name="name_of">Р А П Т</string>
+    <string name="show_timetable">Показать расписание</string>
+    <string name="group_name">Введите группу</string>
+    <string name="call_schedule">Расписание звонков</string>
+    <string name="old_call_schedule">Старое расписание звонков</string>
+    <string name="new_call_schedule">Новое расписание звонков</string>
+    <string name="local_xls_file">timetable.xls</string>
+    <string name="rubt_url">http://rmt.e4u.ru/index.php?option=com_content&amp;view=category&amp;layout=blog&amp;id=34&amp;Itemid=55</string>
+    <string name="db_name">TimetableDatabase</string>
+    <string name="app_preferences">ru.rubt.rubttimetable.app_references</string>
+    <string name="pdf_headers">_pdf_headers_</string>
+    <string name="saved_group_default">_saved_group_default_</string>
+</resources>

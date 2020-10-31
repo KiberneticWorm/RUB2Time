@@ -1,0 +1,81 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion '30.0.2'
+
+    defaultConfig {
+        applicationId "ru.rubt.rubttimetable"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 5
+        versionName "1.3"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8.toString()
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+
+    // Parse HTML
+    implementation 'org.jsoup:jsoup:1.13.1'
+
+    implementation "androidx.recyclerview:recyclerview-selection:1.1.0-rc01"
+
+    // View Pdf
+    implementation 'com.artifex.mupdf:viewer:1.16.1'
+
+    // Library for GIF format
+    implementation 'pl.droidsonroids.gif:android-gif-drawable:1.2.19'
+
+    // OkHTTP
+    implementation 'com.squareup.okhttp3:okhttp:3.10.0'
+
+    // Kotlin
+    implementation "androidx.core:core-ktx:1.4.0-alpha01"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    // Kotlin coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.4.0-M1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0-alpha01'
+
+    def room_version = "2.2.5"
+    // Room library
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    // Material Design
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
+
+    // Apache POI
+    implementation 'org.apache.poi:poi-ooxml:3.9'
+
+    // WorkerManager
+    implementation 'androidx.work:work-runtime-ktx:2.5.0-alpha03'
+
+}
+repositories {
+    mavenCentral()
+}
