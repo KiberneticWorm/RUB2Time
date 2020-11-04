@@ -12,6 +12,13 @@
         android:roundIcon="@mipmap/stopwatch"
         android:theme="@style/AppTheme" >
 
+        <service android:name=".notifications.TimeMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
         <activity android:name=".activity.SplashActivity"
             android:theme="@style/AppTheme.SplashTheme">
             <intent-filter>
@@ -19,7 +26,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".activity.SelectGroupActivity" />
+
         <activity android:parentActivityName=".activity.SelectGroupActivity" android:name=".activity.MainActivity" />
 
         <meta-data

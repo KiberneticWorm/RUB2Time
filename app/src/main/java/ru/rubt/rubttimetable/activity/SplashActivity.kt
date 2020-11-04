@@ -8,6 +8,8 @@ import androidx.lifecycle.Observer
 import androidx.work.OneTimeWorkRequestBuilder
 import androidx.work.PeriodicWorkRequestBuilder
 import androidx.work.WorkManager
+import com.google.firebase.messaging.FirebaseMessaging
+import com.google.firebase.messaging.FirebaseMessagingService
 import ru.rubt.rubttimetable.App
 import ru.rubt.rubttimetable.R
 import ru.rubt.rubttimetable.notifications.CheckWorker
@@ -24,6 +26,8 @@ class SplashActivity : AppCompatActivity() {
         requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT // uses only portrait orientation, don't supports landscape
         
         timeViewModel = ((application as App).getTimeViewModelFactory().create())
+
+        FirebaseMessaging.getInstance().subscribeToTopic("changes")
 
         timeViewModel.isLoaded.observe(this, Observer<Boolean> {
             val workManager = WorkManager.getInstance(applicationContext)
